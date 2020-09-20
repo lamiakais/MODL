@@ -18,5 +18,4 @@ public class RockPaperScissors {
             return Result.LOST;
         }
     }
-
 }

@@ -71,12 +71,39 @@ public class RockPaperScissorsTest<pierre> {
     }
 
 
-    @Test
-    public void testApp(){
-        Play p1 ;
-        p1 = Play.ROCK;
-        Play p2 ;
-        p2 = Play.SCISSORS;
-        assertEquals(RockPaperScissors.play(p1,p2),Result.WIN);
+
+    @DataProvider
+    public Object[][] createWinData(){
+        return new Object[][]{{Play.PAPER,Play.ROCK},{Play.ROCK,Play.SCISSORS},{Play.SCISSORS,Play.PAPER}};
     }
+
+    @DataProvider
+    public Object[][] createTieData(){
+        return new Object[][]{{Play.PAPER,Play.PAPER},{Play.ROCK,Play.ROCK},{Play.SCISSORS,Play.SCISSORS}};
+    }
+
+
+    @DataProvider
+    public Object[][] createLostData(){
+        return new Object[][]{{Play.ROCK,Play.PAPER},{Play.PAPER,Play.ROCK},{Play.SCISSORS,Play.ROCK}};
+    }
+
+
+    @Test (dataProvider = "createWinData")
+    public void testWinPlay(Play p1, Play p2){
+        System.out.println("Coup gagnant : " +p1 + ", " + p2);
+    }
+
+    @Test (dataProvider = "createTieData")
+    public void testTiePlay(Play p1, Play p2){
+        System.out.println("Coup égalité : " +p1 + ", " + p2);
+    }
+
+    @Test (dataProvider = "createLostData")
+    public void testLostPlay(Play p1, Play p2){
+        System.out.println("Coup perdant : " +p1 + ", " + p2);
+    }
+
+
+
 }
