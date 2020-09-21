@@ -1,7 +1,14 @@
-/.gradle/
+.gradle/
+*.class
 
 #Intellij
-/.idea/
-.idea/
+.idea
 *.iml
-*.iws
+build/
+.classpath
+.project
+.settings/
+bin/
+.vscode/
+
+*.jar
