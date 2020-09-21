@@ -1,8 +1,0 @@
-fr/p10/miage/rps/model/Play.java
- fr.p10.miage.rps.model.Play
-fr/p10/miage/rps/model/Result.java
- fr.p10.miage.rps.model.Result
-fr/p10/miage/rps/model/RockPaperScissors.java
- fr.p10.miage.rps.model.RockPaperScissors
-fr/p10/miage/rps/model/Player.java
- fr.p10.miage.rps.model.Player

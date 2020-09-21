@@ -1,2 +1,0 @@
-fr/p10/miage/rps/model/RockPaperScissorsTest.java
- fr.p10.miage.rps.model.RockPaperScissorsTest
