@@ -3,19 +3,28 @@ import org.testng.annotations.*;
 import org.testng.asserts.Assertion;
 import org.testng.Assert;
 
+import java.util.ArrayList;
+
 import static org.testng.Assert.assertEquals;
 
 public class RockPaperScissorsTest<pierre> {
     public RockPaperScissors rps;
+    public Player pp1, pp2;
 
     @BeforeClass
     public void setUp() {
-    rps = new RockPaperScissors();
+        rps = new RockPaperScissors();
+       // pp1.mvts = new ArrayList<>();
+        //pp2.mvts = new ArrayList<>();
     }
 
     @AfterClass
     public void tearDown() {
-    rps = null;
+        rps = null;
+        //pp1.mvts.clear();
+        //pp1.mvts = null;
+        //pp2.mvts.clear();
+        //pp2.mvts = null;
     }
 
     @Parameters({"papier","pierre"})
