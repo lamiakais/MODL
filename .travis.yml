@@ -1,9 +1,0 @@
-language: java
-
-before_install:
- - chmod +x gradlew
-
-sudo : false
-
-script:
-  - ./gradlew check
